@@ -1,0 +1,37 @@
+{
+	"geode": "4.3.1",
+	"gd": {
+		"win": "2.2074",
+		"android": "2.2074",
+		"mac": "2.2074",
+		"ios": "2.2074"
+	},
+	"id": "tia.cornerinfo",
+	"name": "cornerInfo",
+	"version": "v1.0.0",
+	"developer": "tia",
+	"description": "bleh",
+
+	"settings": {
+		"scale": {
+			"type": "float",
+			"name": "InfoBox-Scale",
+			"description": "changes how big the box is lol",
+			"default": 1,
+			"min": 0.3,
+			"max": 2
+		},
+		"opacity": {
+			"type": "float",
+			"name": "opacity",
+			"default": 1,
+			"min": 0,
+			"max": 1
+		}
+
+
+	},
+	"tags": [
+		"offline"
+	]
+}
