@@ -5,7 +5,7 @@ using namespace geode::prelude;
 bool enabled = Mod::get()->getSavedValue<bool>("active", true);
 
 #include <Geode/modify/PlayLayer.hpp>
-class $modify(CornerPlayLayer, PlayLayer) {
+class $modify(CornerInfoPlayLayer, PlayLayer) {
 	bool init(GJGameLevel * level, bool a, bool b) {
 		if (!PlayLayer::init(level, a, b)) {
 			return false;
@@ -71,14 +71,14 @@ class $modify(CornerPlayLayer, PlayLayer) {
 	}
 };
 #include <Geode/modify/PauseLayer.hpp>
-class $modify(CoinPauseLayer, PauseLayer) {
+class $modify(CornerInfoPauseLayer, PauseLayer) {
 	void customSetup() {
 		PauseLayer::customSetup();
 		auto menu = CCMenu::create();
 		this->addChild(menu);
 		menu->setPosition(0, 0);
 
-		auto toggle = CCMenuItemToggler::createWithStandardSprites(this, menu_selector(CoinPauseLayer::onClick), .7);
+		auto toggle = CCMenuItemToggler::createWithStandardSprites(this, menu_selector(CornerInfoPauseLayer::onClick), .7);
 		menu->addChild(toggle);
 		toggle->setPosition(20, 20);
 		auto textLabel = CCLabelBMFont::create("Corner", "bigFont.fnt");
